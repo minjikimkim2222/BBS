@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%><!--   JSP 서버측 설정  -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta HTTP-EQUIV="content-type" CONTENT="text/html; CHARSET=UTF-8" charset = "UTF-8"> <!--  클라이언트 문자 인코딩 방식  --> 
+		
+		<link rel = "stylesheet" href="css/board.css?after" type="text/css">
+		<title>JSP 로그인 페이지</title>
+</head>
+<body>
+
+<h1 class = "h1_align">로그인 화면</h1>
+
+	<form action="" name="loginSelect">
+		<select name = "loginList" onchange = "location = document.loginSelect.loginList.value">
+			<option>선택하세요</option>
+			<option value = "processLoginAdmin.jsp"> admin 로그인 페이지로 이동 </option>
+			<option value = "processLoginUser.jsp">user 로그인 페이지로 이동</option>
+			<option value = "MySQL_ConnectionTest.jsp"> mySQL Connection TEST</option>
+			<option value = "register.jsp">회원가입 페이지로 이동</option>
+		</select>
+	</form>
+</body>
+</html> 

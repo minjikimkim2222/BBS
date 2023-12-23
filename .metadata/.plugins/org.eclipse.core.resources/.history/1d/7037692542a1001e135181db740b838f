@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.h1_align {
+	text-align : center;
+	padding : 20px; /* 내부 여백  */  
+	margin : 20px 260px; /* 외부 여백   */
+	border : solid 2px;
+};
+

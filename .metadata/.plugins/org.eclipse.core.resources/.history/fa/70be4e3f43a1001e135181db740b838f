@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User login</title>
+</head>
+<body>
+	<p>User login 페이지입니다</p>
+
+	<form method = "post" action = "processLoginUser.jsp">
+		<p><input type="text" name="username" placeholder="사용자명"></p>
+		<p><input type="password" name="password" placeholder="비밀번호"></p>
+		<p><input type="submit" value="로그인"></p>
+	</form>
+	
+	<%
+		String userId = request.getParameter("username");
+		String userPw = request.getParameter("password");
+		
+		if (userId != null && userPw != null){
+			com.example.user.UserDBProcess userDB = new com.example.user.UserDBProcess();
+			
+			int loginResult = userDB.login(userId, userPw);
+			
+			if (loginResult == 1){
+				out.println( userId + "님, 환영합니다!");
+	%>
+				<button type = "button" onclick = "logout()">로그아웃</button>
+				
+				<script>
+					function logout(){
+						window.location.href = "processLogoutUser.jsp";
+					}
+				</script>
+	<% 		
+		
+			}
+			
+			
+			else if (loginResult == 0){
+				out.println("로그인 실패! 아이디 또는 비밀번호가 올바르지 않습니다.");
+			}
+			
+			else {
+				out.println("데이터베이스 오류가 발생했습니다!");
+			}
+		}
+	%>
+
+</body>
+</html>

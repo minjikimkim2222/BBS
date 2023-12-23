@@ -1,0 +1,79 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 페이지</title>
+</head>
+<body>
+	<h2>회원가입 페이지입니다</h2>
+	<form method = "post" action = "register.jsp" name = "registerForm" onsubmit = "return validateForm()">
+		<p><input type = "email" name = "email" placeholder = "이메일"></p>
+		<p><input type = "password" name = "password" placeholder = "패스워드"></p>
+		<p><input type = "text" name = "id" placeholder = "아이디"></p>
+		<p>남자<input type = "radio" name = "gender" value = "male">
+		여자<input type = "radio" name = "gender" value = "female"></p> 
+		<p><input type = "submit" value = "회원가입"></p>
+	</form>
+<!-- onclick은 form 태그나 submit 태그에 쓸 수 있음. -->
+
+
+	<script language = "javascript">
+		
+		function validateForm(){
+			var userId = document.registerForm.id.value;
+			var userPassword = document.registerForm.password.value;
+			var userGender = document.registerForm.gender.value;
+			var userEmail = document.registerForm.email.value;
+		
+			
+			if (userId.trim() === "" || userPassword.trim() === ""){
+				alert("아이디와 비밀번호를 입력하세요. ");
+				return (false); // 폼 제출을 막음 
+			}
+				
+			if (userId.length < 6 || userId.length > 12){
+				alert("아이디를 6~12 이내로 입력해주세요");
+				return (false);
+			}
+			
+			if (userPassword.length < 8){
+				alert("비밀번호는 8글자 이상이어야 합니다!");
+				return (false);
+			}
+			
+			if (!isNaN(userId.charAt(0))) // isNotNumber - 숫자 아니면 true, 숫자면 false 반환 
+			{
+				alert("아이디는 숫자로 시작할 수 없습니다!");
+				return (false);
+			}
+			
+
+			return (true); // 필요한 경우 서버로 데이터를 전송하도록 폼을 제출 
+		}
+	</script>
+
+	<%
+		String userId = request.getParameter("id");
+		String userPassword = request.getParameter("password");
+		String userGender = request.getParameter("gender");
+		String userEmail = request.getParameter("email");
+	
+		if (userId != null && userPassword != null && userGender != null && userEmail != null){
+			com.example.user.UserDBProcess userDB = new com.example.user.UserDBProcess();
+		
+			int registerResult = userDB.register(userId, userPassword, userGender, userEmail);
+		
+		if (registerResult == 1){
+			out.println( userId + "님, 회원가입을 축하드립니다!");
+		}
+		else{
+			out.println("회원가입 실패했습니다!");
+		}
+	}
+	%>
+	
+	<p><a href="login.jsp">다시 로그인 화면으로 </a></p>
+</body>
+</html>

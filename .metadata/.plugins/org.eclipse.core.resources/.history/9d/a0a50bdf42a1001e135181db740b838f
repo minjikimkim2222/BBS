@@ -1,0 +1,31 @@
+<%@ page import = "java.sql.DriverManager" %> <!-- java.sql.DriverManager 클래스를 현재 jsp 페이지에 import -->
+<%@ page import = "java.sql.Connection" %>
+<%@ page language="java" contentType = "text/html; charset = UTF-8" pageEncoding="UTF-8"%>
+<!-- DriverManager 클래스는 JDBC 드라이버 관리, DB 연결 및 관리
+Connection interface는 DB와의 연결을 통한 통신  -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>MySQL 연결 드라이버 테스트</title>
+</head>
+<body>
+	<h1>MySQL 연결 드라이버 테스트 </h1>
+	<%
+	String jdbcUrl = "jdbc:mysql://localhost:3306/user";
+	String dbId = "root";
+	String dbPwd = "olivia0929";
+	
+	try
+	{
+		Class.forName("com.mysql.jdbc.Driver");  /* MYSQL JDBC 드라이버 로드  */
+		Connection connection = DriverManager.getConnection(jdbcUrl, dbId, dbPwd); /* 지정된 URL, 사용자 이름, 암호로 데이터베이스에 연결  */
+		out.println("MySQL 연결 성공");
+	}
+	catch (Exception ex)
+	{
+		out.println("연결 오류입니다. 오류 메세지 : " + ex.getMessage());
+	}
+	%>
+</body>
+</html>
