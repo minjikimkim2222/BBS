@@ -4,15 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>logout action 화면</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<%
-		session.invalidate();
-	%>
-	<script>
-		alert('로그아웃 되었습니다');
-		location.href = 'main.jsp';
-	</script>
+
 </body>
 </html>
