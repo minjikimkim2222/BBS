@@ -14,15 +14,20 @@
 	
 	<form action="" name="loginSelect">
 		<select name = "loginList" onchange = "location = document.loginSelect.loginList.value" style="margin-bottom: 20px;">
-			<option>선택하세요</option>
-			<option value = "main.jsp"> 메인 </option>
+			
+			<option value = "main.jsp">메인</option>
 			<option value = "bbs.jsp"> 게시판 </option>
-			<option value = "login.jsp"> 로그인 </option>
-			<option value = "join.jsp"> 회원가입 </option>
 			<option value = "MySQL_ConnectionTest.jsp">sql connection test</option>
+		
+			<optgroup label = "접속하기">
+				<option value = "login.jsp">로그인</option>
+				<option value = "join.jsp">회원가입</option>
+			</optgroup>
+
 		</select>
 	</form>
-	
+
+<!-- 	<span>로그인된 상태입니다2.</span> -->
 		<div class = "container">
 		<div class = "col-lg-4">
 			<div class = "jumbotron" style = "padding-top : 20px;">
