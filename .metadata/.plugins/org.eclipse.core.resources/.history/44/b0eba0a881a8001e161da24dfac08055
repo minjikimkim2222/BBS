@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+
+/* 사용자 지정 스타일 추가 */
+
+/*
+.header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: right;
+}
+*/
+
+.center-content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* 공통 버튼 스타일 */
+.button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* 메인으로 버튼 스타일 */
+.main-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+/* 로그아웃 버튼 스타일 */
+.logout-button {
+    background-color: #f44336; /* Red */
+    color: white;
+}
