@@ -29,6 +29,7 @@
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  
 }
 
 .jumbotron {
@@ -42,9 +43,14 @@
 
 .col-lg-4 {
   width: 33.33333333%;
+
 }
 
 
 .col-lg-5 {
     width: 41.66666667%;
 }
+
+
+
+
