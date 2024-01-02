@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>writeAction.jsp</title>
+</head>
+<body>
+
+writeAction 페이지입니다. write.jsp페이지로부터의 form태그를 받습니다.
+
+</body>
+</html>

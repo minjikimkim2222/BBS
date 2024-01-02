@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<style>
+
+		table, th, td {
+			border : 2px solid #dddddd;
+		}
+		
+		table {
+		 	width : 100%;
+
+		}
+</style>
+<title>write 화면</title>
+</head>
+<body>
+
+write.jsp 화면입니다.
+
+	<div class = "my-container">
+		<div class = "my-row">
+			<form method = "post" action = "writeAction.jsp">
+				<table>
+					<thead>
+						<tr>
+							<th>게시판 글쓰기 양식</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

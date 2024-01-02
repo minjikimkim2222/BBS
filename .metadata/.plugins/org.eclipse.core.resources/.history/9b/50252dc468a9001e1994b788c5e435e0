@@ -1,0 +1,7 @@
+package com.example.bbs;
+
+public class BbsDao {
+	private String jdbcUrl = "jdbc:mysql://localhost:3306/BBS"; // 프로토콜, 서버주소, 서버포트, DB이름
+	private String dbId = "root";
+	private String dbPwd = "olivia0929";
+}

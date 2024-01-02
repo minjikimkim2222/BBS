@@ -1,0 +1,43 @@
+package com.example.bbs;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class BbsDao {
+	private String jdbcUrl = "jdbc:mysql://localhost:3306/BBS"; // 프로토콜, 서버주소, 서버포트, DB이름
+	private String dbId = "root";
+	private String dbPwd = "olivia0929";
+
+	private Connection conn;
+	private ResultSet rs;
+
+	// 기본 생성자 - DB 로딩 + DB와 이클립스 연결(Connection)
+	public BbsDao() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			conn = DriverManager.getConnection(jdbcUrl, dbId, dbPwd);
+		} catch (Exception ex) {
+			System.out.println("연결 오류입니다. 오류 메세지 : " + ex.getMessage());
+		}
+	}
+
+	// 작성 일자 리턴하는 메서드
+	public String getDate() {
+		String sql = "select now()";
+
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				return rs.getString(1);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return "";
+	}
+}

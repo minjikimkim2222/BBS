@@ -76,20 +76,6 @@
 							<td width = "25%">minjiki2</td>
 							<td width = "25%">2024-01-01</td>
 						</tr>
-						
-						<tr>
-							<td width = "25%">2</td>
-							<td width = "25%">두번째 게시글 테스트</td>
-							<td width = "25%">hi22</td>
-							<td width = "25%">2024-01-02</td>
-						</tr>
-						
-						<tr>
-							<td width = "25%">3</td>
-							<td width = "25%">세번째 게시글 테스트</td>
-							<td width = "25%">hi33</td>
-							<td width = "25%">2024-01-03</td>
-						</tr>
 					</tbody>
 				</table>	
 			

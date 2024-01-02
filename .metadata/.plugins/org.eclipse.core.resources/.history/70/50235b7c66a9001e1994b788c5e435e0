@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel = "stylesheet" href = "css/bootstrap.css">
+<style>
+
+		table, th, td {
+			border : 2px solid #dddddd;
+		}
+		
+		table {
+		 	width : 100%;
+
+		}
+</style>
+<title>write 화면</title>
+</head>
+<body>
+
+	<div class = "my-container">
+		<div class = "my-row">
+			<form method = "post" action = "writeAction.jsp">
+				<table class = "table table-striped" style = "text-align : center;">
+					<thead>
+						<tr>
+							<th colspan = "2" style = "background-color : #eeeeee;">게시판 글쓰기 양식</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type = "text" class = "form-control" placeholder = "글 제목" name = "bbsTitle" maxlength = "50"></td>
+						</tr>
+						<tr>
+							<td><textarea class = "form-control" placeholder = "글 내용" name = "bbsContent" maxlength = "2048"></textarea></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

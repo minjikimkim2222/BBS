@@ -1,0 +1,16 @@
+package com.example.bbs;
+
+public class BbsDao {
+	private String jdbcUrl = "jdbc:mysql://localhost:3306/BBS"; // 프로토콜, 서버주소, 서버포트, DB이름
+	private String dbId = "root";
+	private String dbPwd = "olivia0929";
+
+	// 기본 생성자
+	public BbsDao() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (Exception ex) {
+			System.out.println("연결 오류입니다. 오류 메세지 : " + ex.getMessage());
+		}
+	}
+}
