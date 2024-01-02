@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta HTTP-EQUIV="content-type" CONTENT="text/html; CHARSET=UTF-8" charset = "UTF-8"> <!--  클라이언트 문자 인코딩 방식  --> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" href = "css/bootstrap.css">
+
+	<title>bbs 게시판 화면</title>
+</head>
+<body>
+
+<!-- 게시판 메인 페이지 영역 시작  -->
+
+	<div class = "container">
+		<div class = "row">
+			<table class = "table table-striped" style = "text-align : center; border : 2px solid #dddddd">
+				<thead>
+					<tr>
+						<th style = "backgroud-color : #eeeeee; text-align : center;" >번호</th>
+						<th style = "backgroud-color : #eeeeee; text-align : center;">제목</th>
+						<th style = "backgroud-color : #eeeeee; text-align : center;">작성자</th>
+						<th style = "backgroud-color : #eeeeee; text-align : center;">작성일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>안녕하세요</td>
+						<td>minjiki2</td>
+						<td>2024-01-01</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

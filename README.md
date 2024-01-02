@@ -6,7 +6,7 @@
 **기능**
 1. 로그인과 회원가입 - mysql, JDBC driver
 2. 세션관리 - HttpSession 객체
-
+3. 게시판화면 - <table>
 
 **예정기능**
 1. 게시판 DB
@@ -28,3 +28,4 @@
 ![image](https://github.com/minjikimkim2222/BBS/assets/96869808/f57d22af-02ac-49f0-a0d4-9ae8d4e934b3)
 ![image](https://github.com/minjikimkim2222/BBS/assets/96869808/abb35b60-cf7b-4180-85f9-25eb4f106957)
 ![image](https://github.com/minjikimkim2222/BBS/assets/96869808/9bc004b0-8525-4732-808a-b11f5c2fcec3)
+![Alt text](image/image.png)

@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bbs 게시판 화면</title>
+</head>
+<body>
+
+<!-- 게시판 메인 페이지 영역 시작  -->
+
+	<div class = "container">
+		<div class = "row">
+			<table>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

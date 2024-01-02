@@ -1,0 +1,69 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta HTTP-EQUIV="content-type" CONTENT="text/html; CHARSET=UTF-8" charset = "UTF-8"> <!--  클라이언트 문자 인코딩 방식  --> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" href = "css/bootstrap.css">
+
+	<style>
+		.container-fluid {
+		background-color : red;
+		
+		
+		}
+		
+		.container {
+			background-color : blue;
+		}
+		
+		.row {
+			background-color : yellow;
+		}
+		
+		table, th, td {
+			border : 2px solid #dddddd;
+		}
+		
+		table {
+		 	width : 100%;
+		}
+	</style>
+	<title>bbs 게시판 화면</title>
+</head>
+<body>
+
+<!-- 게시판 메인 페이지 영역 시작  -->
+
+	<div class = "container">
+		<div class = "row">
+			<h3 style = "text-align : center;">게시판 메인</h3>
+			
+			<div class = "container-fluid">
+				<table class = "table table-striped" style = "text-align : center;">
+					<thead>
+						<tr>
+							<th style = "background-color : #eeeeee" >번호</th>
+							<th style = "background-color : #eeeeee">제목</th>
+							<th style = "background-color : #eeeeee">작성자</th>
+							<th style = "background-color : #eeeeee">작성일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>안녕하세요</td>
+							<td>minjiki2</td>
+							<td>2024-01-01</td>
+						</tr>
+					</tbody>
+				</table>	
+			
+			<!-- 글쓰기 버튼 생성, 버튼 누르면 write.jsp 페이지로 이동할 것 -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

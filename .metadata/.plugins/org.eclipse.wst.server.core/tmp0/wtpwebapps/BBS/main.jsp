@@ -36,9 +36,9 @@
     </div>
 
     <div class="middle center-content">
-    	<h1>메인 화면</h1>
+    	<h1>메인 화면 </h1>
         <!-- 게시판 버튼 -->
-        <a href="#" class="button main-button">게시판</a> <!-- 게시판 링크는 아직 추가 안 함  -->
+        <a href="bbs.jsp" class="button main-button">게시판</a> <!-- 게시판 링크는 아직 추가 안 함  -->
     </div>
     		
 </body>
